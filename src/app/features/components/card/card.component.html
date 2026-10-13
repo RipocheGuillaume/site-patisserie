@@ -1,10 +1,52 @@
 <article class="creation-card" [id]="categoryId">
-  <a [routerLink]="link" [attr.aria-label]="'Voir les ' + title">
-    <img [src]="image" [alt]="title" width="329" height="254" loading="lazy" />
+  @if (type) {
+    <a [routerLink]="['/', type]" [attr.aria-label]="'Voir les ' + title">
+      <img [src]="image" [alt]="title" loading="lazy" />
 
-    <span class="card-label">
-      {{ title }}
-      <span aria-hidden="true">→</span>
-    </span>
-  </a>
+      <span class="card-label">
+        {{ title }}
+        <span aria-hidden="true">→</span>
+      </span>
+    </a>
+  } @else {
+    <button
+      type="button"
+      [attr.aria-label]="'Voir les ' + title"
+      (click)="openModal({ title, image, description, type: categoryId })"
+    >
+      <img [src]="image" [alt]="title" loading="lazy" />
+
+      <span class="card-label">
+        {{ title }}
+        <span aria-hidden="true">→</span>
+      </span>
+    </button>
+  }
 </article>
+
+@if (selectedProduct(); as product) {
+  <dialog
+    open
+    class="modal"
+    aria-labelledby="modal-title"
+    (keydown.escape)="closeModal()"
+  >
+    <button
+      type="button"
+      class="modal-close"
+      aria-label="Fermer la fenêtre"
+      autofocus
+      (click)="closeModal()"
+    >
+      ✕
+    </button>
+
+    <img [src]="product.image" [alt]="product.title" />
+    <div class="modal-content">
+      <h2 id="modal-title">{{ product.title }}</h2>
+      <p>{{ product.description }}</p>
+    </div>
+  </dialog>
+
+  <div class="modal-overlay" (click)="closeModal()"></div>
+}

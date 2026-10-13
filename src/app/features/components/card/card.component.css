@@ -10,13 +10,22 @@
   background: var(--sage);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .creation-card img {
   width: 100%;
   aspect-ratio: 1.29;
   object-fit: cover;
 }
 
-.creation-card a {
+.creation-card button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   color: inherit;
 }
@@ -44,4 +53,53 @@
   .card-label {
     font-size: 26px;
   }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgb(0 0 0 / 60%);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  margin: auto;
+  box-sizing: border-box;
+  width: min(90vw, 550px);
+  max-height: 90vh;
+  padding: 24px;
+  overflow-y: auto;
+  border: none;
+  border-radius: 16px;
+  background: #f8f5ed;
+  color: #0b3023;
+}
+
+.modal img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-content {
+  background-color: #f8f5ed;
+  background: var(--sage);
+  padding: 0 16px;
+}
+
+.modal-content h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-close {
+  display: block;
+  margin: 0 0 12px auto;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
 }

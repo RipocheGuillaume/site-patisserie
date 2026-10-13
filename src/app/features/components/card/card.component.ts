@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
+import { ProductModel } from '../../../models/modelHome';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,12 +9,19 @@ import { RouterLink } from '@angular/router';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
+  @Input() categoryId = '';
   @Input() title = '';
   @Input() image = '';
   @Input() description = '';
-  @Input() link = '';
+  @Input() type? = '';
 
-  get categoryId(): string {
-    return this.image.replace('images/', '').replace('.jpg', '');
+  selectedProduct = signal<ProductModel | null>(null);
+
+  openModal(product: ProductModel) {
+    this.selectedProduct.set(product);
+  }
+
+  closeModal() {
+    this.selectedProduct.set(null);
   }
 }

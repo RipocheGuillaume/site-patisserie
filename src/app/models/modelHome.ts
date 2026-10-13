@@ -33,36 +33,7 @@ export class HomeModel {
   ];
 }
 
-export class ChocolatsModel {
-  categories: ProductModel[] = [
-    new ProductModel(
-      'La Croix du Sud',
-      '/images/chocolats/croix-du-sud.png',
-      'Une création gourmande au chocolat et au praliné de noisettes.',
-      'chocolats',
-    ),
-    new ProductModel(
-      'rochers',
-      '/images/chocolats/rochers.png',
-      'Des bouchées chocolatées aux noisettes et aux textures croquantes.',
-      'chocolats',
-    ),
-    new ProductModel(
-      'Les palets de chocolat',
-      '/images/chocolats/palets-de-chocolat.png',
-      'De fins palets de chocolat parsemés de touches gourmandes.',
-      'chocolats',
-    ),
-    new ProductModel(
-      'Les éclats de chocolat',
-      '/images/chocolats/eclats-de-chocolat.png',
-      'Des éclats de chocolat généreux, garnis de fruits à coque.',
-      '/chocolats',
-    ),
-  ];
-}
-
-export class PatisseriesModel {
+export class Products {
   categories: ProductModel[] = [
     new ProductModel(
       'La tarte aux fraises',
@@ -99,6 +70,30 @@ export class PatisseriesModel {
       '/images/patisserie/Entremets-framboise.png',
       'Un entremets gourmand au glaçage rose, décoré de framboises fraîches.',
       'patisseries',
+    ),
+    new ProductModel(
+      'La Croix du Sud',
+      '/images/chocolats/croix-du-sud.png',
+      'Une création gourmande au chocolat et au praliné de noisettes.',
+      'chocolats',
+    ),
+    new ProductModel(
+      'rochers',
+      '/images/chocolats/rochers.png',
+      'Des bouchées chocolatées aux noisettes et aux textures croquantes.',
+      'chocolats',
+    ),
+    new ProductModel(
+      'Les palets de chocolat',
+      '/images/chocolats/palets-de-chocolat.png',
+      'De fins palets de chocolat parsemés de touches gourmandes.',
+      'chocolats',
+    ),
+    new ProductModel(
+      'Les éclats de chocolat',
+      '/images/chocolats/eclats-de-chocolat.png',
+      'Des éclats de chocolat généreux, garnis de fruits à coque.',
+      'chocolats',
     ),
   ];
 }

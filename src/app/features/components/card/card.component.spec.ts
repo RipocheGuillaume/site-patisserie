@@ -1,7 +1,6 @@
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {expect} from '@jest/globals';
 import { CardComponent } from './card.component';
-import { beforeEach, describe, it } from 'node:test';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -9,6 +8,7 @@ describe('CardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [provideRouter([])],
       imports: [CardComponent]
     })
     .compileComponents();

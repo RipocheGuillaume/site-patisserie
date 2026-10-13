@@ -1,12 +1,14 @@
+import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
+import { routes } from './app.routes';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import {expect,} from '@jest/globals';
-import { beforeEach, describe, it } from 'node:test';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [provideRouter(routes)],
     }).compileComponents();
   });
 
@@ -22,10 +24,8 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('site-patisserie');
   });
 
-  it('should render the homepage heading', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Le goût');
+  it('should render the homepage heading', async () => {
+    const harness = await RouterTestingHarness.create('/');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Le goût');
   });
 });

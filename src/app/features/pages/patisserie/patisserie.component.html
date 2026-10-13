@@ -1,6 +1,6 @@
 <section class="creations" id="creations" aria-labelledby="creations-title">
-  <h2 class="section-title">Nos Création Chocolatées</h2>
-  @for (card of cards; track card.description) {
+  <h2 class="section-title" id="creations-title">Nos pâtisseries</h2>
+  @for (card of cards(); track card.image) {
     <app-card
       [title]="card.title"
       [image]="card.image"

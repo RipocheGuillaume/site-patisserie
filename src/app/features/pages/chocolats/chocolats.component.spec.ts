@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { expect } from '@jest/globals';
-import { beforeEach, describe, it } from 'node:test';
 import { ChocolatsComponent } from './chocolats.component';
 
 describe('ChocolatsComponent', () => {
@@ -16,6 +14,11 @@ describe('ChocolatsComponent', () => {
     fixture = TestBed.createComponent(ChocolatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  it('renders all chocolats products', () => {
+    expect(component.cards().length).toBe(4);
+    expect(fixture.nativeElement.querySelectorAll('app-card').length).toBe(4);
   });
 
   it('should create', () => {

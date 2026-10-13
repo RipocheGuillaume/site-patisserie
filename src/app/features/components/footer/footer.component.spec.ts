@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { expect } from '@jest/globals';
-import { beforeEach, describe, it } from 'node:test';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {

@@ -4,7 +4,7 @@
       <img [src]="image" [alt]="title" loading="lazy" />
 
       <span class="card-label">
-        {{ title }}
+        {{ type.charAt(0).toUpperCase() + type.slice(1) }}
         <span aria-hidden="true">→</span>
       </span>
     </a>

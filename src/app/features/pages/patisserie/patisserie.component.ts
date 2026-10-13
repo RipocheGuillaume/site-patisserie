@@ -1,8 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { PatisseriesModel } from '../../../models/modelHome';
+import { Component, computed, inject } from '@angular/core';
+import { ProductsService } from '../../../services/products.service';
 import { CardComponent } from '../../components/card/card.component';
-
-type Patisserie = PatisseriesModel['categories'][number];
 
 @Component({
   selector: 'app-patisserie',
@@ -11,6 +9,8 @@ type Patisserie = PatisseriesModel['categories'][number];
   styleUrl: './patisserie.component.css',
 })
 export class PatisserieComponent {
-  cards = new PatisseriesModel().categories;
-  selectedPatisserie = signal<Patisserie | null>(null);
+  private readonly productsService = inject(ProductsService);
+  readonly cards = computed(() =>
+    this.productsService.getProductsByType('patisseries'),
+  );
 }

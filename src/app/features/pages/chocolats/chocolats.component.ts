@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ChocolatsModel } from '../../../models/modelHome';
+import { Component, computed, inject } from '@angular/core';
+import { ProductsService } from '../../../services/products.service';
 import { CardComponent } from '../../components/card/card.component';
 
 @Component({
@@ -9,5 +9,8 @@ import { CardComponent } from '../../components/card/card.component';
   styleUrl: './chocolats.component.css',
 })
 export class ChocolatsComponent {
-  cards = new ChocolatsModel().categories;
+  private readonly productsService = inject(ProductsService);
+  readonly cards = computed(() =>
+    this.productsService.getProductsByType('chocolats'),
+  );
 }

@@ -1,7 +1,6 @@
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { expect } from '@jest/globals';
-import { beforeEach, describe, it } from 'node:test';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -10,6 +9,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [provideRouter([])],
       imports: [HomeComponent],
     }).compileComponents();
 

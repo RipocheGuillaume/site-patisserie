@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": [],
@@ -70,7 +71,10 @@
               "buildTarget": "site-patisserie:build:production"
             },
             "development": {
-              "buildTarget": "site-patisserie:build:development"
+              "buildTarget": "site-patisserie:build:development",
+              "hmr": false,
+              "liveReload": true,
+              "poll": 1000
             }
           },
           "defaultConfiguration": "development"

@@ -36,6 +36,12 @@ export class HomeModel {
 export class Products {
   categories: ProductModel[] = [
     new ProductModel(
+      'Macarons',
+      '/images/macarons.jpg',
+      'Des coques délicates, des couleurs tendres et des saveurs gourmandes. Découvrez les parfums disponibles en boutique.',
+      'macarons',
+    ),
+    new ProductModel(
       'La tarte aux fraises',
       '/images/patisserie/Tarte-aux-fraise.png',
       'Une pâte dorée, une crème pâtissière onctueuse et des fraises fraîches pour une pause fruitée.',

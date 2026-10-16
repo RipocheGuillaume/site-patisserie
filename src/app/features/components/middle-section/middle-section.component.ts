@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { ProductsService } from '../../../services/products.service';
+import { TypesService } from '../../../core/services/types/types.service';
 import { CardComponent } from '../card/card.component';
 
 @Component({
@@ -9,8 +9,6 @@ import { CardComponent } from '../card/card.component';
   styleUrl: './middle-section.component.css',
 })
 export class MiddleSectionComponent {
-  private readonly productsService = inject(ProductsService);
-  readonly cards = computed(
-    () => this.productsService.selectOneTypeByproduct() || [],
-  );
+  private readonly typesService = inject(TypesService);
+  readonly cards = computed(() => this.typesService.selectTypeForHomePage());
 }

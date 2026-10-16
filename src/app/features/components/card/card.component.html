@@ -12,7 +12,7 @@
     <button
       type="button"
       [attr.aria-label]="'Voir les ' + title"
-      (click)="openModal({ title, image, description, type: categoryId })"
+      (click)="openModal({ name: title, image, description })"
     >
       <img [src]="image" [alt]="title" loading="lazy" />
 
@@ -41,9 +41,9 @@
       ✕
     </button>
 
-    <img [src]="product.image" [alt]="product.title" />
+    <img [src]="product.image" [alt]="product.name" />
     <div class="modal-content">
-      <h2 id="modal-title">{{ product.title }}</h2>
+      <h2 id="modal-title">{{ product.name }}</h2>
       <p>{{ product.description }}</p>
     </div>
   </dialog>

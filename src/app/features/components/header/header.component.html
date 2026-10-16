@@ -23,13 +23,13 @@
     aria-label="Navigation principale"
     [class.is-open]="menuOpen"
   >
-    <a routerLink="/specialites" (click)="menuOpen = false">Spécialités</a>
+    <a routerLink="/gateaux" (click)="menuOpen = false">Gâteaux</a>
     <a routerLink="/patisseries" (click)="menuOpen = false">Pâtisseries</a>
     <a routerLink="/chocolats" (click)="menuOpen = false">Chocolats</a>
-    <a routerLink="/la-maison" (click)="menuOpen = false">La maison</a>
+    <a routerLink="/" fragment="maison" (click)="menuOpen = false">La maison</a>
 
-    <a class="visit" href="#visite" (click)="menuOpen = false"
-      >Nous rendre visite</a
+    <a class="visit" routerLink="/login" (click)="menuOpen = false"
+      >Se connecter</a
     >
   </nav>
 </header>

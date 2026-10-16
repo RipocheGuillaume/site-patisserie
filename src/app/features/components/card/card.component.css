@@ -12,7 +12,6 @@
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 .creation-card img {
@@ -27,7 +26,6 @@ a {
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: inherit;
 }
 
 .card-label {
@@ -42,7 +40,6 @@ a {
 
 .card-label span {
   font-size: 28px;
-  text-decoration: none;
 }
 
 @media (max-width: 760px) {
@@ -67,7 +64,6 @@ a {
   inset: 0;
   z-index: 1001;
   margin: auto;
-  box-sizing: border-box;
   width: min(90vw, 550px);
   max-height: 90vh;
   padding: 24px;
@@ -79,13 +75,11 @@ a {
 }
 
 .modal img {
-  display: block;
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
 
 .modal-content {
-  background-color: #f8f5ed;
   background: var(--sage);
   padding: 0 16px;
 }
@@ -101,5 +95,4 @@ a {
   border: none;
   background: transparent;
   font-size: 24px;
-  cursor: pointer;
 }

@@ -1,11 +1,11 @@
 <section class="creations" id="creations" aria-labelledby="creations-title">
   <h2 class="section-title" id="creations-title">Nos envies gourmandes</h2>
-  @for (card of cards(); track card.description) {
+  @for (card of cards(); track card.id) {
     <app-card
-      [title]="card.title"
+      [title]="card.name"
       [image]="card.image"
       [description]="card.description"
-      [type]="card.type"
+      [type]="card.name"
     />
   }
 </section>

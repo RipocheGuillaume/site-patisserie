@@ -1,6 +1,6 @@
 import { Component, Input, signal } from '@angular/core';
-import { ProductModel } from '../../../models/modelHome';
 import { RouterLink } from '@angular/router';
+import { ProductModel } from '../../../core/interfaces/products.model';
 
 @Component({
   selector: 'app-card',
@@ -15,9 +15,12 @@ export class CardComponent {
   @Input() description = '';
   @Input() type? = '';
 
-  selectedProduct = signal<ProductModel | null>(null);
+  selectedProduct = signal<Pick<
+    ProductModel,
+    'name' | 'image' | 'description'
+  > | null>(null);
 
-  openModal(product: ProductModel) {
+  openModal(product: Pick<ProductModel, 'name' | 'image' | 'description'>) {
     this.selectedProduct.set(product);
   }
 

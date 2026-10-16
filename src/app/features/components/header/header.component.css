@@ -23,7 +23,7 @@
 
 .brand-name {
   font-size: 55px;
-  line-height: .95;
+  line-height: 0.95;
   letter-spacing: -2px;
 }
 
@@ -62,7 +62,6 @@ nav a:hover {
   border: 0;
   background: transparent;
   padding: 10px;
-  color: inherit;
 }
 
 .menu-toggle span {

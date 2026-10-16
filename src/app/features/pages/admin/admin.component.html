@@ -1,0 +1,7 @@
+<h1>Administration</h1>
+
+@if (authService.user(); as user) {
+  <p>Bienvenue {{ user.name }}</p>
+}
+
+<button (click)="logout()">Se déconnecter</button>

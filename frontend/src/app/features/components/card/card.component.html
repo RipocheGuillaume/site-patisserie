@@ -1,0 +1,52 @@
+<article class="creation-card" [id]="categoryId">
+  @if (type) {
+    <a [routerLink]="['/', type]" [attr.aria-label]="'Voir les ' + title">
+      <img [src]="image" [alt]="title" loading="lazy" />
+
+      <span class="card-label">
+        {{ type.charAt(0).toUpperCase() + type.slice(1) }}
+        <span aria-hidden="true">→</span>
+      </span>
+    </a>
+  } @else {
+    <button
+      type="button"
+      [attr.aria-label]="'Voir les ' + title"
+      (click)="openModal({ name: title, image, description })"
+    >
+      <img [src]="image" [alt]="title" loading="lazy" />
+
+      <span class="card-label">
+        {{ title }}
+        <span aria-hidden="true">→</span>
+      </span>
+    </button>
+  }
+</article>
+
+@if (selectedProduct(); as product) {
+  <dialog
+    open
+    class="modal"
+    aria-labelledby="modal-title"
+    (keydown.escape)="closeModal()"
+  >
+    <button
+      type="button"
+      class="modal-close"
+      aria-label="Fermer la fenêtre"
+      autofocus
+      (click)="closeModal()"
+    >
+      ✕
+    </button>
+
+    <img [src]="product.image" [alt]="product.name" />
+    <div class="modal-content">
+      <h2 id="modal-title">{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+    </div>
+  </dialog>
+
+  <div class="modal-overlay" (click)="closeModal()"></div>
+}

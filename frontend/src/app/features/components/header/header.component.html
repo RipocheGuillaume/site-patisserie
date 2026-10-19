@@ -1,0 +1,35 @@
+<header class="site-header">
+  <a
+    class="brand"
+    routerLink="/"
+    aria-label="Vidal, accueil"
+    (click)="menuOpen = false"
+  >
+    <span class="brand-name">Envie</span>
+    <span class="brand-subtitle">PÂTISSERIE · CHOCOLATERIE</span>
+  </a>
+  <button
+    class="menu-toggle"
+    type="button"
+    (click)="menuOpen = !menuOpen"
+    [attr.aria-expanded]="menuOpen"
+    aria-controls="navigation"
+    aria-label="Ouvrir ou fermer le menu"
+  >
+    <span></span><span></span><span></span>
+  </button>
+  <nav
+    id="navigation"
+    aria-label="Navigation principale"
+    [class.is-open]="menuOpen"
+  >
+    <a routerLink="/gateaux" (click)="menuOpen = false">Gâteaux</a>
+    <a routerLink="/patisseries" (click)="menuOpen = false">Pâtisseries</a>
+    <a routerLink="/chocolats" (click)="menuOpen = false">Chocolats</a>
+    <a routerLink="/" fragment="maison" (click)="menuOpen = false">La maison</a>
+
+    <a class="visit" routerLink="/login" (click)="menuOpen = false"
+      >Se connecter</a
+    >
+  </nav>
+</header>

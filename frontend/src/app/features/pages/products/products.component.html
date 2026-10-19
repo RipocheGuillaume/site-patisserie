@@ -1,0 +1,12 @@
+<section class="creations" id="creations" aria-labelledby="creations-title">
+  <h2 class="section-title" id="creations-title">{{ title() }}</h2>
+  @if (error()) { <p role="alert">{{ error() }}</p> }
+  @for (product of products(); track product.id) {
+    <app-card
+      [title]="product.name"
+      [image]="product.image"
+      [description]="product.description"
+    />
+  }
+</section>
+

@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()">
+  <h2>Connexion</h2>
+
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="email"
+    placeholder="Email"
+    required
+  />
+
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    placeholder="Mot de passe"
+    required
+  />
+
+  <button type="submit" [disabled]="pending()">Se connecter</button>
+
+  @if (error()) {
+    <p>{{ error() }}</p>
+  }
+</form>
+

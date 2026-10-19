@@ -1,0 +1,98 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.creation-card {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--sage);
+}
+
+a {
+  text-decoration: none;
+}
+
+.creation-card img {
+  width: 100%;
+  aspect-ratio: 1.29;
+  object-fit: cover;
+}
+
+.creation-card button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.card-label span {
+  font-size: 28px;
+}
+
+@media (max-width: 760px) {
+  .creation-card img {
+    aspect-ratio: 1.5;
+  }
+
+  .card-label {
+    font-size: 26px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgb(0 0 0 / 60%);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  margin: auto;
+  width: min(90vw, 550px);
+  max-height: 90vh;
+  padding: 24px;
+  overflow-y: auto;
+  border: none;
+  border-radius: 16px;
+  background: #f8f5ed;
+  color: #0b3023;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-content {
+  background: var(--sage);
+  padding: 0 16px;
+}
+
+.modal-content h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-close {
+  display: block;
+  margin: 0 0 12px auto;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+}

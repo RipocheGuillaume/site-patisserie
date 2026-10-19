@@ -1,0 +1,64 @@
+:host {
+  display: block;
+}
+
+.specialties {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background: #dce4ce;
+  min-height: 414px;
+  overflow: hidden;
+}
+
+.specialties-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specialties-content {
+  padding: 58px 25px 45px;
+  align-self: center;
+}
+
+.specialties h2 {
+  font-size: clamp(40px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.small-rule {
+  display: block;
+  width: 42px;
+  height: 1px;
+  background: var(--green);
+  margin: 22px 0;
+}
+
+.specialties p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.specialties .button {
+  font-size: 19px;
+  padding: 11px 38px;
+}
+
+@media (max-width: 760px) {
+  .specialties {
+    grid-template-columns: 1fr;
+  }
+
+  .specialties-image {
+    height: 300px;
+  }
+
+  .specialties-content {
+    padding: 35px 8% 40px;
+  }
+
+  .specialties h2 {
+    font-size: 54px;
+  }
+}

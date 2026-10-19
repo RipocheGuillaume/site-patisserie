@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "gateaux",
+    "image": "images/gateaux/Opera.png",
+    "description": "Découvrez notre sélection de gâteaux, alliant tradition et créativité pour des moments gourmands inoubliables."
+  },
+  {
+    "id": "2",
+    "name": "patisseries",
+    "image": "images/patisseries.jpg",
+    "description": "Explorez notre gamme de pâtisseries, des classiques revisités aux créations originales, pour satisfaire toutes vos envies sucrées."
+  },
+  {
+    "id": "3",
+    "name": "chocolats",
+    "image": "images/chocolats/chocolats.jpg",
+    "description": "Plongez dans l'univers du chocolat avec nos créations artisanales, alliant saveurs intenses et textures fondantes."
+  },
+  {
+    "id": "4",
+    "name": "macarons",
+    "image": "images/macarons.jpg",
+    "description": "Savourez nos macarons délicats, aux couleurs et saveurs variées, pour une expérience gustative raffinée."
+  }
+]

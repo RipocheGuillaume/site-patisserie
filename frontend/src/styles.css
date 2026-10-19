@@ -1,0 +1,126 @@
+@import './init.css';
+
+:root {
+  --green: #103e23;
+  --cream: #faf7ef;
+  --sage: #dce3cd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--green);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #8a6d2f;
+  outline-offset: 5px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eyebrow {
+  font: 12px/1.5 Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 13px 39px;
+  border-radius: 40px;
+  border: 1px solid var(--green);
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 1.4;
+  transition: background 0.2s, transform 0.2s;
+}
+
+a.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-solid {
+  margin-top: 30px;
+  background: var(--green);
+  color: var(--cream);
+}
+
+.button-solid:hover {
+  background: #215435;
+}
+
+.button-outline {
+  background: transparent;
+}
+
+a.button-outline:hover {
+  background: #103e2310;
+}
+
+@media (max-width: 760px) {
+  .button {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+
+  .button-solid {
+    margin-top: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

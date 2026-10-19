@@ -1,0 +1,5 @@
+@import '../../../shared/styles/creations.css';
+
+.creations {
+  row-gap: 15px;
+}

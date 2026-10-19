@@ -1,0 +1,114 @@
+[
+  {
+    "id": "1",
+    "name": "Macarons",
+    "image": "images/macarons.jpg",
+    "description": "Des coques délicates, des couleurs tendres et des saveurs gourmandes. Découvrez les parfums disponibles en boutique.",
+    "type": "macarons"
+  },
+  {
+    "id": "2",
+    "name": "La tarte aux fraises",
+    "image": "images/patisserie/Tarte-aux-fraise.png",
+    "description": "Une pâte dorée, une crème pâtissière onctueuse et des fraises fraîches pour une pause fruitée.",
+    "type": "patisseries"
+  },
+  {
+    "id": "3",
+    "name": "Les éclairs au chocolat",
+    "image": "images/patisserie/Eclairs-au-chocolat.png",
+    "description": "Une pâte à choux délicate garnie de crème au chocolat et recouverte d’un glaçage gourmand.",
+    "type": "patisseries"
+  },
+  {
+    "id": "4",
+    "name": "Le mille-feuille",
+    "image": "images/patisserie/Mille-feuille-vanille.png",
+    "description": "Un feuilletage croustillant et une crème à la vanille pour un grand classique de la pâtisserie.",
+    "type": "patisseries"
+  },
+  {
+    "id": "5",
+    "name": "Le Paris-Brest",
+    "image": "images/patisserie/Paris-Brest.png",
+    "description": "Une couronne de pâte à choux aux amandes, généreusement garnie de crème au praliné.",
+    "type": "patisseries"
+  },
+  {
+    "id": "6",
+    "name": "La tarte au citron meringuée",
+    "image": "images/patisserie/Tarte-au-citron.png",
+    "description": "Une crème au citron acidulée et une meringue légèrement dorée sur une pâte croustillante.",
+    "type": "patisseries"
+  },
+  {
+    "id": "7",
+    "name": "L’entremets aux framboises",
+    "image": "images/patisserie/Entremets-framboise.png",
+    "description": "Un entremets gourmand au glaçage rose, décoré de framboises fraîches.",
+    "type": "patisseries"
+  },
+  {
+    "id": "8",
+    "name": "La Croix du Sud",
+    "image": "images/chocolats/croix-du-sud.png",
+    "description": "Une création gourmande au chocolat et au praliné de noisettes.",
+    "type": "chocolats"
+  },
+  {
+    "id": "9",
+    "name": "Les rochers",
+    "image": "images/chocolats/rochers.png",
+    "description": "Des bouchées chocolatées aux noisettes et aux textures croquantes.",
+    "type": "chocolats"
+  },
+  {
+    "id": "10",
+    "name": "Les palets de chocolat",
+    "image": "images/chocolats/palets-de-chocolat.png",
+    "description": "De fins palets de chocolat parsemés de touches gourmandes.",
+    "type": "chocolats"
+  },
+  {
+    "id": "11",
+    "name": "Les éclats de chocolat",
+    "image": "images/chocolats/eclats-de-chocolat.png",
+    "description": "Des éclats de chocolat généreux, garnis de fruits à coque.",
+    "type": "chocolats"
+  },
+  {
+    "id": "12",
+    "name": "L’Opéra",
+    "image": "images/gateaux/Opera.png",
+    "description": "Un biscuit Joconde moelleux, une crème au café et une ganache au chocolat, sublimés par un glaçage brillant.",
+    "type": "gateaux"
+  },
+  {
+    "id": "13",
+    "name": "Le fraisier",
+    "image": "images/gateaux/Fraisier.png",
+    "description": "Une génoise légère, une crème mousseline à la vanille et de généreuses fraises fraîches pour un dessert tout en douceur.",
+    "type": "gateaux"
+  },
+  {
+    "id": "14",
+    "name": "Le Saint-Honoré",
+    "image": "images/gateaux/Saint-Honore.png",
+    "description": "Un feuilletage croustillant, des petits choux caramélisés et une crème chantilly délicate pour un grand classique gourmand.",
+    "type": "gateaux"
+  },
+  {
+    "id": "15",
+    "name": "Le Royal chocolat",
+    "image": "images/gateaux/Royal-chocolat.png",
+    "description": "Une mousse au chocolat fondante sur un biscuit moelleux et un croustillant praliné, avec une finition veloutée au cacao.",
+    "type": "gateaux"
+  },
+  {
+    "id": "16",
+    "name": "La Forêt-Noire",
+    "image": "images/gateaux/Foret-noire.png",
+    "description": "Une génoise au chocolat, une chantilly légère et des cerises gourmandes, délicatement recouvertes de copeaux de chocolat.",
+    "type": "gateaux"
+  }
+]

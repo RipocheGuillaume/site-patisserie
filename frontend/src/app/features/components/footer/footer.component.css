@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+footer {
+  padding: 50px 6%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-description {
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+footer p {
+  margin-bottom: 12px;
+}
+
+.text-link {
+  text-underline-offset: 5px;
+}
+
+@media (max-width: 760px) {
+  footer {
+    flex-direction: column;
+    padding: 35px 8%;
+  }
+}
